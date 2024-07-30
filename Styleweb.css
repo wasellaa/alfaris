@@ -1,0 +1,385 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.5)), url(bgkopii.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    width: 100%;
+    margin: auto;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #000;
+}
+
+.judul {
+    width: 120px;
+    font-size: 45px;
+    color: orange;
+}
+
+.header ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+.header ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.header ul li:hover::after {
+    width: 100%;
+}
+
+/* content*/
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 200px;
+}
+
+button:hover {
+    border: none;
+}
+
+/*shop*/
+
+.shop {
+    background-color: black;
+    width: 100%;
+}
+
+.shop .shop-header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shop-header h2 {
+    color: orange;
+    padding: 30px 30px;
+}
+
+.shop-header h3 {
+    color: orange;
+    padding: 10px 20px;
+}
+
+.shop-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: lightslategrey;
+    padding: 50px 0;
+    flex-wrap: wrap;
+}
+
+.shop-box .card {
+    width: 280px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.shop-box .card:hover {
+    transform: scale(1.05);
+}
+
+.shop-box .card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.shop-box .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.shop-box .card-image img:hover {
+    transform: scale(1.1);
+}
+
+.shop-box .card-body {
+    padding: 20px;
+    color: black;
+    border: 3px solid #3B3B3B;
+}
+
+.shop-box .card-body h3 {
+    padding: 10px 0;
+}
+
+.shop-box .card-body .cash {
+    font-size: 22px;
+}
+
+/* animasi gambarnya */
+.shop-box .card:hover .card-body {
+    background-color: #f4f4f4;
+    transform: scale(1.05);
+}
+
+/*About*/
+
+.about{
+    width: -100%;
+    padding: 78px;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.5)),  url(bgpropil.png);
+}
+
+.about img{
+    height: auto;
+    width: 420px;
+}
+
+.about-text{
+    width: 550px;
+}
+
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h1{
+    color: white;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5{
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.about-text p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button{
+    background: #009688;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding-left: 13px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover{
+    background: transparent;
+    border: 2px solid #009688;
+    cursor: pointer;
+}
+
+/*Contact ku*/
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: 2px solid black;
+}
+
+.contact .contact-box{
+    flex: 1;
+}
+
+.contact .contact-box .contact-image, .contact .contact-box .contact-body{
+    height: 100%;
+
+}
+
+.contact img{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-image img{
+    opacity: .9;
+}
+
+.contact-body{
+    background-color: black;
+    height: 100%;
+    border-left: 2px solid #333333;
+}
+
+.contact-body form{
+    padding: 50px 40px;
+    box-sizing: border-box;
+}
+
+.contact-body h2{
+    color: orange;
+}
+
+form .form-content{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid lightgray;
+}
+
+form .form-content input{
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+}
+
+form .form-content label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: gray;
+    transform: translateY(-50%);
+    font-size: 17px;
+    transition: .5s;
+    pointer-events: none;
+}
+
+form .form-content span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    width: 0%;
+    height: 2px;
+    background: orange;
+    transform: .4s;
+}
+
+form .form-content input:focus~label, form .form-content input:valid~label{
+    top: 5px;
+    color: orange;
+}
+
+/*footer*/
+
+.footer {
+    background: rgb(21, 21, 21);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
